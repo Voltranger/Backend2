@@ -1,11 +1,30 @@
-import mongoose from "mongoose";
-import DB_NAME  from "./constants.js";
-
+import  dotenv  from "dotenv";
+import connectDB from "./db/index.js";
 import express from "express";
-const app=express();
 
 
-(async()=>{
+
+dotenv.config(
+    {
+        path:'./'
+    }
+)
+
+
+connectDB();
+
+
+
+
+
+
+
+
+
+
+
+
+/*(async()=>{
     try
     {
         await mongoose.connect( `${process.env.MONGODB_URI}/${DB_NAME}`);
@@ -22,4 +41,4 @@ const app=express();
         console.error("Error:",err);
         throw(err);
     }
-})()//IIFE:IMMEDIATELY INVOKED FUNCTION EXPRESSION
+})()//IIFE:IMMEDIATELY INVOKED FUNCTION EXPRESSION*/
