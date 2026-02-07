@@ -1,20 +1,16 @@
-import { error } from "error"
-
-class ApiError extends Error{
+class ApiError extends Error {
     constructor(
         statusCode,
-        message="Something went Wrong",
-        errors=[],
-        stack=""
-
-    )
-    {
+        message = "Something went Wrong",
+        errors = [],
+        stack = ""
+    ) {
         super(message)
-        this.statusCode=statusCode,
-        this.message=message,
-        this.data=null,
-        this.success=false
-        this.errors=error
+        this.statusCode = statusCode
+        this.message = message
+        this.data = null
+        this.success = false
+        this.errors = errors
 
 
         if(stack)
